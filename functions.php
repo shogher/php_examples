@@ -1,9 +1,9 @@
 <?php
-$array = array(1, 5, 10, 7, 8, 9);
+/*$array = array(1, 5, 10, 7, 8, 9);
 $dict = array("name" => "Shogher", "lastname" => "Baghryan", "age" => 22 );
 $array1 = array("one", "thousand", "two", "autumn");
 $MYtext = "hs shjj agagfgahaga dhdjf fdjsgfjsgfk abagagwidiewoi hdhajk";
-
+*/
 
 function maximum($ar) {
   $maximum = $ar[0];
@@ -66,9 +66,21 @@ function drawInput($row, $column) {
     echo '</div>';
   }
 }
+function postData($_POST) {
+  $matrix = $_POST['item'];
+  $sum = $matrix[0] + $matrix[4] + $matrix[8];
+  $max = maximum($matrix);
+  $t_summ = sum($matrix);
+  if ($sum == $_POST['result'][0] && $max == $_POST['result'][1] && $t_summ == $_POST['result'][2]) {
+      echo "YOUR ANSWER IS RIGHT";
+    } else {
+    echo "TRY AGAIN";
+  }
+}
 
 
-echo nameData($dict);
+
+/*echo nameData($dict);
 echo "\n\n\nReturn maximum element from given array";
 echo maximum($array);
 echo "\n\n\n";
@@ -82,5 +94,5 @@ echo wordReplace($MYtext);
 echo "\n\n\nRandom number product \n";
 echo RandProd(7);
 echo "\n\n\n";
-echo drawInput(3, 3);
+echo drawInput(3, 3);*/
 
