@@ -17,6 +17,7 @@
         <?php
             require("functions.php");
             echo drawInput(3, 3);
+            echo changeImage("photos");
         ?>
         <div class="form-inline">
           D/Summ <input type='number' class='form-control' name='result[]'></br>
